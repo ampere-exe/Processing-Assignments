@@ -14,7 +14,7 @@ float[] smokeY = new float[numParticles]; // Declare arrays for smoke positions
 int smokeIndex = 0; // Index to keep track of the next available particle position
 boolean winterElement = false;
 boolean sunActive = true;//Flag to track whether belt is active or not
-boolean displayText1 = true;
+boolean displayText1 = false;
 boolean displayText2 = true;
 float sunSize = 150; // Initial size of the sun
 float shineFactor = 0.2; // Factor to control sun shine/sun shine speed
@@ -30,11 +30,12 @@ float angle = 0; // starting value of angle
 float angleIncrement = radians(1.5); // Increment for angle
 boolean armDirection = true; // True for increasing angle, false for decreasing angle
 String[] messages = {
-    "Hello Mr. Karas! \nPress 'e' to continue",
+    "",
+    "Hello Mr. Karas!",
     "My name is John Frost XIII",
-    "I can't believe it's winter! \nDon't you just love \nchristmas?",
+    "Ican't believe it's winter! \nDon't you just love \nchristmas?",
     "How do you like my project \nso far?",
-    "I hope you like it, but\nfor now you can check \nout the rest of it",
+    "Ihope you like it, but\nfor now you can check \nout the rest of it",
     "Have a great day!",
     "Oh yeah, you can close \nthis by pressing 'q'"
 };
@@ -309,7 +310,7 @@ void draw() {
             noStroke();
             fill(255);
             rect(864, 252, 20, 16.5);
-        } 
+        }
         
     }
 }
@@ -332,7 +333,7 @@ void mousePressed() {
 }
 
 void keyPressed() {
-    if (winterElement == true) {
+    if (key == 'e' && winterElement == true) {
         displayText1 = true;
         currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Cycle through messages
     } else if (key == 'q') {
@@ -340,7 +341,6 @@ void keyPressed() {
         displayText2 = false;
     }
     if (key == 'e') {
-        displayText1 = true;
         displayText2 = true;
     }
     

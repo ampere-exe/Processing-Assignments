@@ -341,7 +341,7 @@ void keyPressed() {
         displayText2 = false;
     }
     if (key == 'e') {
-        displayText2 = true; 
+        displayText2 = true; //Lets see if this works
     }
     
 }

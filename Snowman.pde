@@ -33,9 +33,9 @@ String[] messages = {
     "",
     "Hello Mr. Karas!",
     "My name is John Frost XIII",
-    "Ican't believe it's winter! \nDon't you just love \nchristmas?",
+    "I can't believe it's winter! \nDon't you just love \nchristmas?",
     "How do you like my project \nso far?",
-    "Ihope you like it, but\nfor now you can check \nout the rest of it",
+    "I hope you like it, but\nfor now you can check \nout the rest of it",
     "Have a great day!",
     "Oh yeah, you can close \nthis by pressing 'q'"
 };
@@ -117,8 +117,7 @@ void draw() {
     //Draw sun when active
     if (sunActive) {
         fill(253, 184, 19); //Yellow color for the sun
-        
-        float shineSize = sunSize + sin(frameCount * shineFactor) * 10;
+        float shineSize = sunSize + sin(frameCount * shineFactor) * 10; //use behavior of sinusodal waves to mimic shine of the sun.
         ellipse(100, 100, shineSize, shineSize); // Draw a sun that changes size
     }
     

@@ -193,8 +193,8 @@ void draw() {
         noStroke();
         rect(0, 620, 1280, 100); 
         //Imperfect snow 
-        for (int i = 0; i < 1280; i+=20) {
-            ellipse(0+i, 619, random(48,50),random(28,30));
+        for (int i = 0; i < 1280; i += 20) {
+            ellipse(0 + i, 619, random(48,50),random(28,30));
         }
         
         //hat

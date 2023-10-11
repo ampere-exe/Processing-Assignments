@@ -180,10 +180,14 @@ void draw() {
     }
     
     if (winterElement) {
-        //Snowy Floor
+        // Snowy base
         fill(255);
         noStroke();
-        rect(0, 620, 1280, 100); // Snowy floor
+        rect(0, 620, 1280, 100); 
+        //Imperfect snow 
+        for (int i = 0; i < 1280; i+=20) {
+            ellipse(0+i, 619, random(48,50),random(28,30));
+        }
         
         //hat
         fill(0);
@@ -294,7 +298,7 @@ void draw() {
         
         //Simulate Snow
         
-        for (int i = 0; i < 400; i++) {
+        for (int i = 0; i < 300; i++) {
             noStroke();
             fill(255);
             ellipse(snowX + (random(0,1280)), snowY + (random(0,720)), 5, 5);
@@ -317,6 +321,7 @@ void draw() {
         fill(0,154,23);
         noStroke();
         rect(0, 620, 1280, 100); 
+        
         
         //frown for summer
         fill(0);

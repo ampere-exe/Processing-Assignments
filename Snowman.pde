@@ -1,9 +1,17 @@
-//Welcome to my snowman project. 
-//To start the program, press either the right or left mouse button to change the environment of the snowman.
-//Once in winter mode, press the 'e' key to start some new dialogue and q to remove dialogue (from either the summer and winter environments).
-//Change the variables of the sunSize and shineFactor to change the size of the sun and shineFactor of the sun.
-//change the numParticles variable to increase or decrease # of particles for the pipe smoke.
-//
+/*
+Zuhair Emaz
+Snowman - Assignment
+CS10 - BLock 10
+Date Completed: 
+*/
+
+/*Welcome to my snowman project. 
+1. To start the program, press either the right or left mouse button to change the environment of the snowman.
+2. Once in winter mode, press the 'e' key to start some new dialogue and q to remove dialogue (from either the summer and winter environments).
+3. Change the variables of shineFactor to change the shine of the sun.
+4. change the numParticles variable to increase or decrease # of particles for the pipe smoke.
+*/
+
 float snowX = random(width);
 float snowY = random(height);
 int backgroundColor = color(35, 206, 235);
@@ -14,7 +22,7 @@ float[] smokeX = new float[numParticles];
 float[] smokeY = new float[numParticles]; // Declare arrays for smoke positions
 int smokeIndex = 0; // Index to keep track of the next available particle position
 boolean winterElement = false;
-boolean sunActive = true;//Flag to track whether belt is active or not
+boolean sunActive = true;//Flag to track whether belt is aBctive or not
 boolean displayText1 = false;
 boolean displayText2 = true;
 float sunSize = 150; // Initial size of the sun
@@ -34,7 +42,7 @@ String[] messages = {
     "",
     "Hello Mr. Karas!",
     "My name is John Frost XIII",
-    "I can't believe it's winter! \nDon't you just love \nchristmas?",
+    "I can't believe it's winter! \nDon't you just love \nChristmas?",
     "How do you like my project \nso far?",
     "I hope you like it, but\nfor now you can check \nout the rest of it",
     "Have a great day!",

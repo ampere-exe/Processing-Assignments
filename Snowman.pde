@@ -197,7 +197,6 @@ void draw() {
         fill(150, 75, 0);
         rect(155, 460, 65, 160);
         
-        
         //christmas Tree
         fill(32,98, 20);
         triangle(29, 460, 346, 460, 188, 320);

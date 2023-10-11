@@ -4,7 +4,8 @@
 //Change the variables of the sunSize and shineFactor to change the size of the sun and shineFactor of the sun.
 //change the numParticles variable to increase or decrease # of particles for the pipe smoke.
 //
-
+float snowX = random(width);
+float snowY = random(height);
 int backgroundColor = color(35, 206, 235);
 float pipeX = 923;
 float pipeY = 271;
@@ -114,11 +115,25 @@ void draw() {
     smokeIndex = (smokeIndex + 1) % numParticles; // Cycle through the particle array
     
     
+    
     //Draw sun when active
     if (sunActive) {
+        //Sun
         fill(253, 184, 19); //Yellow color for the sun
-        float shineSize = sunSize + sin(frameCount * shineFactor) * 10; //use behavior of sinusodal waves to mimic shine of the sun.
+        float shineSize = sunSize + sin(frameCount * shineFactor) * 10; //use behavior of sinusodal waves to mimic shine of the sun and rays.
         ellipse(100, 100, shineSize, shineSize); // Draw a sun that changes size
+        
+        //Sunrays
+        stroke(253, 184, 19);
+        strokeWeight(5);
+        line(88 + shineSize, 106, 44 + shineSize, 106); // right ray
+        line(80 - shineSize / 2, 106, 80 - shineSize, 106);//left ray
+        line(102, shineSize + 88, 102, shineSize + 44); //bottom raya
+        line(102, 80 - shineSize / 2, 102, 80 - shineSize); //top ray
+        line(24 + shineSize, 24 + shineSize, 48 + shineSize, 48 + shineSize); // bottom right ray
+        line(24 + shineSize, 120 - shineSize / 2, 48 + shineSize, 100 - shineSize / 2); // top right ray
+        line(100 - shineSize / 2, 100 + shineSize / 2, 95 - (shineSize + 30) / 2, 105 + (shineSize + 30) / 2); // bottom left ray
+        line(100 - shineSize / 2, 120 - shineSize / 2, 100 - (shineSize + 30) / 2 - 5, 100 - shineSize / 2 - 5);
     }
     
     //Draw cloud
@@ -223,7 +238,6 @@ void draw() {
         ellipse(262, 359, 10, 10);
         
         
-        
         //christmas star
         fill(255, 255, 0);
         noStroke();
@@ -277,6 +291,25 @@ void draw() {
         if (angle > radians(50) || angle < radians(0)) {
             armDirection = !armDirection;
         }
+        
+        //Simulate Snow
+        
+        for (int i = 0; i < 400; i++) {
+            noStroke();
+            fill(255);
+            ellipse(snowX + (random(0,1280)), snowY + (random(0,720)), 5, 5);
+            
+            // Move snowflakes downwards
+            snowY += 1;
+            
+            // Reset snowflake at the top when it goes off the canvas
+            if (snowY > height) {
+                snowY = 0;
+            }
+        }
+        // Generate a random snowflake
+        
+        
         
     } else {
         

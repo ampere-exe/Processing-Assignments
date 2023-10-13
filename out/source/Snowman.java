@@ -16,10 +16,12 @@ import java.io.IOException;
 public class Snowman extends PApplet {
 
 /*
-Zuhair Emaz
-Snowman - Assignment
-CS10 - Block 10
+Full Name: Zuhair Emaz
+Assignment Name: Snowman - Assignment
+Class: CS10 - Block 10
 Date Completed: Fri, Oct 13
+
+This program is my own work - Digital Signature (ZE)
 
 References:
 Documentation, https://processing.org/reference/
@@ -33,8 +35,6 @@ Trigonometric Functions, https://www.youtube.com/watch?v=KrnDb8gheP0
 2. Once in the winter environment, press the 'e' key to start some new dialogue and 'q' to remove dialogue.
 3. Change the variables of shineFactor to change the shine of the sun.
 4. change the numParticles variable to increase or decrease # of particles for the pipe smoke.
-5. I'd like to point out that I spent over 16-18 hours on this, learning everything to make this
-and fixing my code, so thank you for taking the time to look at my project.
 */
 
 int backgroundColor = color(35, 206, 235); //sets default background color
@@ -175,7 +175,7 @@ public void draw() {
     //Cloud 1 (top cloud)
     ellipse(cloudX, cloudY, 120, 100); // Cloud shape
     ellipse(cloudX + 40, cloudY, 120, 100);
-    ellipse(cloudX + 70, cloudY, 120, 100);
+    ellipse(cloudX + 70, cloudY, 120, 100); 
     ellipse(cloudX + 90, cloudY, 100, 70);
     
     //Cloud 2 (bottom cloud)

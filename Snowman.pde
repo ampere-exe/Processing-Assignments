@@ -13,14 +13,14 @@ Trigonometric Functions, https://www.youtube.com/watch?v=KrnDb8gheP0
 
 /* Welcome to my snowman project. 
 1. To start the program, press either the right or left mouse button to change the environment of the snowman.
-2. Once in the winter environment, press the 'e' key to start some new dialogue and q to remove dialogue.
+2. Once in the winter environment, press the 'e' key to start some new dialogue and 'q' to remove dialogue.
 3. Change the variables of shineFactor to change the shine of the sun.
 4. change the numParticles variable to increase or decrease # of particles for the pipe smoke.
 5. I'd like to point out that I spent over 16-18 hours on this, learning everything to make this
  and fixing my code, so thank you for taking the time to look at my project.
 */
 
-int backgroundColor = color(35, 206, 235);
+int backgroundColor = color(35, 206, 235); //sets default background color
 float snowX = random(width); //snow x coordinates
 float snowY = random(height); //snow y coordinates
 float pipeX = 923; //corncob pipe x coordinates
@@ -292,7 +292,7 @@ void draw() {
         line(x1, y1, endpointX, endpointY); //left arm
         line(1086,348, 1150, 422); // right arm
         
-        // Controlthe arm's motion
+        // Control the arm's motion
         if (armDirection) {
             angle += angleIncrement;
         } else {

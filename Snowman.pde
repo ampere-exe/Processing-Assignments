@@ -17,7 +17,7 @@ Trigonometric Functions, https://www.youtube.com/watch?v=KrnDb8gheP0
 3. Change the variables of shineFactor to change the shine of the sun.
 4. change the numParticles variable to increase or decrease # of particles for the pipe smoke.
 5. I'd like to point out that I spent over 16-18 hours on this, learning everything to make this
- and fixing my code, so thank you for taking the time to look at my project.
+and fixing my code, so thank you for taking the time to look at my project.
 */
 
 int backgroundColor = color(35, 206, 235); //sets default background color
@@ -131,14 +131,14 @@ void draw() {
     
     
     
-    //Draw sun when active
+    // Draw sun when active
     if (sunActive) {
-        //Sun
+        // Dynamic Sun
         fill(253, 184, 19); //Yellow color for the sun
         float shineSize = sunSize + sin(frameCount * shineFactor) * 10; //use behavior of sinusodal waves to mimic shine of the sun and rays.
         ellipse(100, 100, shineSize, shineSize); // Draw a sun that changes size
         
-        //Sunrays
+        // Dynamic sunrays
         stroke(253, 184, 19);
         strokeWeight(5);
         line(88 + shineSize, 106, 44 + shineSize, 106); // right ray
@@ -155,13 +155,13 @@ void draw() {
     noStroke(); //remove outline for clouds
     fill(255); // White color for the clouds
     
-    //Cloud 1
+    //Cloud 1 (top cloud)
     ellipse(cloudX, cloudY, 120, 100); // Cloud shape
     ellipse(cloudX + 40, cloudY, 120, 100);
     ellipse(cloudX + 70, cloudY, 120, 100);
     ellipse(cloudX + 90, cloudY, 100, 70);
     
-    //Cloud 2
+    //Cloud 2 (bottom cloud)
     ellipse(cloudX1, cloudY1, 120, 100);
     ellipse(cloudX1 + 40, cloudY1, 120, 100);
     ellipse(cloudX1 + 70, cloudY1, 120, 100);
@@ -195,13 +195,13 @@ void draw() {
     }
     
     if (winter) {
-        // Snowy floor
+        // Snow base
         fill(255);
         noStroke();
         rect(0, 620, 1280, 100); 
-        //Imperfect upper snow
+        //Imperfect snow floor
         for (int i = 0; i < 1280; i += 20) {
-            ellipse(0 + i, 619, random(48,50),random(28,30));
+            ellipse(0 + i, 619, random(47,50),random(27,30));
         }
         
         //hat
@@ -251,8 +251,8 @@ void draw() {
         
         
         //christmas star
-        fill(255, 255, 0);
-        noStroke();
+        fill(255, 215, 0); //yellow color for star
+        noStroke(); //removes star outline
         translate(189, 100);
         beginShape();
         vertex(0, -50);

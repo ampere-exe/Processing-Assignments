@@ -5,7 +5,7 @@ CS10 - Block 10
 Date Completed: Fri, Oct 13
 
 References:
-Documentation https://processing.org/reference/
+Documentation, https://processing.org/reference/
 Arrays, https://pages.uoregon.edu/park/Processing/process4.html
 Sine functions, https://stackoverflow.com/questions/40291618/animating-sine-waves-in-processing
 Trigonometric Functions, https://www.youtube.com/watch?v=KrnDb8gheP0
@@ -16,8 +16,8 @@ Trigonometric Functions, https://www.youtube.com/watch?v=KrnDb8gheP0
 2. Once in the winter environment, press the 'e' key to start some new dialogue and q to remove dialogue.
 3. Change the variables of shineFactor to change the shine of the sun.
 4. change the numParticles variable to increase or decrease # of particles for the pipe smoke.
-5. I'd like to point out that I spent over 16-18 hours on this, learning everything and fixing my code, 
-so thank you for taking the time to look at my project.
+5. I'd like to point out that I spent over 16-18 hours on this, learning everything to make this
+ and fixing my code, so thank you for taking the time to look at my project.
 */
 
 int backgroundColor = color(35, 206, 235);
